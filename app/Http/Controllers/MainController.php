@@ -15,4 +15,14 @@ class MainController extends Controller
     {
         echo 'about';
     }
+
+    public function mostrarValor($valor)
+    {
+        echo "O valor enviado pela rota: $valor";
+    }
+
+    public function mostrarPosts($user_id, $post_id)
+    {
+        echo "O usuário com ID: $user_id, está acessando o post de ID: $post_id";
+    }
 }

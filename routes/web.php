@@ -15,3 +15,10 @@ Route::get('/index', [MainController::class, 'index']);
 Route::get('/about', [MainController::class, 'about']);
 
 Route::view('/view', 'home', ['myName' => 'Alessandro']);
+
+// -----------------------------------------
+// ROUTE PARAMETERS
+// -----------------------------------------
+
+Route::get('/valor/{value}', [MainController::class, 'mostrarValor']);
+Route::get('/user/{user_id}/post/{post_id}', [MainController::class, 'mostrarPosts']);
