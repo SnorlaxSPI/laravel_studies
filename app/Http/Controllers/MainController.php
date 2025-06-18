@@ -3,26 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class MainController extends Controller
 {
-    public function index()
+    public function initMethod(): string
     {
-        echo 'index';
+        return "Hello World!";
     }
 
-    public function about()
+    public function viewPage(): View
     {
-        echo 'about';
-    }
-
-    public function mostrarValor($valor)
-    {
-        echo "O valor enviado pela rota: $valor";
-    }
-
-    public function mostrarPosts($user_id, $post_id)
-    {
-        echo "O usuário com ID: $user_id, está acessando o post de ID: $post_id";
+        return view('home');
     }
 }
